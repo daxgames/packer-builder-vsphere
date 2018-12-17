@@ -387,6 +387,7 @@ func createFloppyConfig(filePath string) string {
 }
 
 func TestISOBuilderAcc_full(t *testing.T) {
+	t.Skip("test is too slow")
 	config := fullConfig()
 	builderT.Test(t, builderT.TestCase{
 		Builder:  &Builder{},
@@ -486,6 +487,7 @@ func checkFull(t *testing.T) builderT.TestCheckFunc {
 }
 
 func TestISOBuilderAcc_bootOrder(t *testing.T) {
+	t.Skip("test is too slow")
 	config := fullConfig()
 	config["boot_order"] = "disk,cdrom,floppy"
 
