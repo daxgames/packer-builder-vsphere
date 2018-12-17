@@ -3,5 +3,6 @@ vendor/
 .vendor-new/
 packer-builder-vsphere*
 bin/
+.env
 test*.json
 crash.log
