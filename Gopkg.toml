@@ -20,6 +20,10 @@
   name = "github.com/ugorji/go"
   revision = "646ae4a518c1c3be0739df898118d9bccf993858"
 
+[[override]]
+  name = "github.com/cheggaaa/pb"
+  version = "1"
+
 [prune]
   go-tests = true
   unused-packages = true
