@@ -1,7 +1,7 @@
 version: '2'
 services:
   build:
-    image: jetbrainsinfra/golang:1.11.3
+    image: jetbrainsinfra/golang:1.11.4
     volumes:
       - .:/work
       - modules:/go/pkg/mod
@@ -12,7 +12,7 @@ services:
     command: ./build.sh
 
   test:
-    image: jetbrainsinfra/golang:1.11.3
+    image: jetbrainsinfra/golang:1.11.4
     volumes:
       - .:/work
       - modules:/go/pkg/mod
