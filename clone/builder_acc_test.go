@@ -657,12 +657,12 @@ func windowsConfig() map[string]interface{} {
 		"password":            password,
 		"insecure_connection": true,
 
-		"vm_name": commonT.NewVMName(),
-		"template": "windows",
-		"host":     "esxi-1.vsphere65.test",
+		"vm_name":      commonT.NewVMName(),
+		"template":     "windows",
+		"host":         "esxi-1.vsphere65.test",
 		"linked_clone": true, // speed up
 
-		"communicator": "winrm",
+		"communicator":   "winrm",
 		"winrm_username": "jetbrains",
 		"winrm_password": "jetbrains",
 	}

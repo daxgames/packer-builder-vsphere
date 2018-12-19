@@ -415,7 +415,7 @@ func fullConfig() map[string]interface{} {
 		"vm_name": commonT.NewVMName(),
 		"host":    "esxi-1.vsphere65.test",
 
-		"RAM": 1024,
+		"RAM":                   1024,
 		"disk_controller_type":  "pvscsi",
 		"disk_size":             4096,
 		"disk_thin_provisioned": true,
