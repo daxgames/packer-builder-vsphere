@@ -3,15 +3,15 @@ services:
   build:
     image: jetbrainsinfra/golang:1.11.3
     volumes:
-      - .:/go/src/github.com/jetbrains-infra/packer-builder-vsphere
-    working_dir: /go/src/github.com/jetbrains-infra/packer-builder-vsphere
+      - .:/work
+    working_dir: /work
     command: ./build.sh
 
   test:
     image: jetbrainsinfra/golang:1.11.3
     volumes:
-      - .:/go/src/github.com/jetbrains-infra/packer-builder-vsphere
-    working_dir: /go/src/github.com/jetbrains-infra/packer-builder-vsphere
+      - .:/work
+    working_dir: /work
 #    network_mode: "container:vpn"
     environment:
       - VSPHERE_USERNAME
