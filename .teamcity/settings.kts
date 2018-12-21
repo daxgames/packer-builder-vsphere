@@ -13,11 +13,9 @@ project {
     description = "https://github.com/jetbrains-infra/packer-builder-vsphere"
 
     vcsRoot(GitHub)
-
     buildType(Build)
 
     features {
-
         feature {
             type = "IssueTracker"
             param("type", "GithubIssues")
@@ -51,12 +49,12 @@ object Build : BuildType({
     }
 
     params {
+        param("env.GOPATH", "%teamcity.build.checkoutDir%/build/modules")
+        param("env.GOCACHE", "%teamcity.build.checkoutDir%/build/cache")
+
         password("env.VPN_PASSWORD", "credentialsJSON:8c355e81-9a26-4788-8fea-c854cd646c35")
         param   ("env.VSPHERE_USERNAME", """vsphere65.test\teamcity""")
         password("env.VSPHERE_PASSWORD", "credentialsJSON:3e99d6c8-b66f-410a-a865-eaf1b12664ad")
-
-        param("env.GOPATH", "%teamcity.build.checkoutDir%/build/modules")
-        param("env.GOCACHE", "%teamcity.build.checkoutDir%/build/cache")
     }
 
     steps {
