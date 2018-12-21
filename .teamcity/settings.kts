@@ -59,6 +59,14 @@ object Build : BuildType({
 
     steps {
         script {
+            scriptContent = """
+                pwd
+                ls -laR
+            """.trimIndent()
+            dockerImage = golangImage
+            dockerPull = true
+        }
+        script {
             name = "Build"
             scriptContent = "./build.sh"
             dockerImage = golangImage
